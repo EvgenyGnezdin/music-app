@@ -1,6 +1,6 @@
 export const HomePage = () => {
     return (
-        <div>
+        <div style={{backgroundColor: 'red'}}>
             HomePage
         </div>
     );

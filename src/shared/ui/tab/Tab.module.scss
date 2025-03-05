@@ -1,0 +1,31 @@
+.link {
+    display: block;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color .3s ease-out;
+    border: none;
+    padding: 16px 20px;
+    border-radius: 16px;
+    height: 52px;
+    font-weight: 500;
+    font-size: 1.0625rem;
+    color: #1d2023;
+    transition: opacity ease-out .5s;
+    &:hover {
+        transition: opacity ease-out .5s;
+        opacity: .7;
+    }
+}
+.linkActive {
+    display: block;
+    white-space: nowrap;
+    border: none;
+    padding: 16px 20px;
+    border-radius: 16px;
+    height: 52px;
+    font-weight: 500;
+    font-size: 1.0625rem;
+    color: #fff;
+    background-color: #1d2023;
+}
+

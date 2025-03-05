@@ -1,9 +1,18 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-main {
-    display: flex;
+.mainLayout {
+    display: grid;
+    grid-template-columns: 256px calc(100% - 256px);
+    grid-template-rows: min-content min-content 1fr min-content;
+    min-height: 100vh;
+    grid-template-areas:
+        "header header"
+        "sidebar tabs"
+        "sidebar main"
+        "sidebar footer";
+    .main {
+        margin: 0 auto;
+        width: 100%;
+        padding: 32px 32px 0;
+        max-width: 1664px;
+        grid-area: main;
+    }
 }

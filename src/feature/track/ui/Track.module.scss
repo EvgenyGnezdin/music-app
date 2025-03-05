@@ -1,0 +1,118 @@
+.track {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px;
+    border-radius: 16px;
+    cursor: pointer;
+    .info {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        column-gap: 15px;
+        .positionBlock {
+            width: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .imgBlock {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(188, 195, 208, .5);
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            button {
+                min-width: 32px;
+                min-height: 32px;
+                width: 32px;
+                height: 32px;
+                .trackIcon {
+                    z-index: 2;
+                    min-width: 20px;
+                    min-height: 20px;
+                    position: absolute;
+                    top: 21%;
+                    left: 20%;
+                    display: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        .content {
+            div {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                .nameMusic {
+                    font-size: 17px;
+                    color: #1d2023;
+                    &:hover {
+                        color: #2563eb;
+                    }
+                }
+            }
+            p { 
+                .name {
+                    color: #626c77;
+                    font-size: 14px;
+                    font-weight: 400;
+                    &:hover {
+                        color: #2563eb;
+                    }
+                }
+            }
+        }  
+    }
+    .rightBlock {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-right: 20px;
+        .likeBlock {
+            display: none;
+            column-gap: 20px;
+            height: 25px;
+            .relike {
+                &:hover {
+                    stroke: #2563eb;
+                }
+            }
+            .like {
+                &:hover {
+                    stroke: #2563eb;
+                }
+            }
+        }
+       .duration {
+            position: absolute;
+            right: 20px;
+            color: #626c77;
+            font-size: 17px;
+       }
+    }
+    &:hover {
+        transition: box-shadow .1s;
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .08), 0 0 16px 0 rgba(0, 0, 0, .08);
+        .info {
+            .imgBlock {
+                .trackIcon {
+                    display: block;
+                }
+            }
+        }
+        .rightBlock {
+            .duration {
+                display: none;
+            }
+            .likeBlock {
+                display: flex;
+            }
+        }
+    }
+}

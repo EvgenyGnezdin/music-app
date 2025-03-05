@@ -1,0 +1,44 @@
+.sidebar {
+    position: fixed;
+    z-index: 1;
+    width: 255px;
+    height: 100vh;
+    margin-top: 72px;
+    padding: 20px 0;
+    background-color: #f2f3f7;
+    grid-area: "sidebar";
+    nav {
+        padding: 0 16px;
+        .li {
+            cursor: pointer;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            padding: 14px 16px;
+            column-gap: 12px;
+            text-decoration: none;
+            fill: #b4c3cb;
+            color: #1d2023;
+            &:hover {
+                transition: background-color .3s;
+                border-radius: 16px;
+                background-color: #fff;
+            &:active {
+                .titleLink {
+                    color: #2563eb;
+                }
+                .iconLink {
+                    fill: #2563eb;
+                }
+            }    
+            }
+        }
+    }
+}
+
+.activeTitle {
+    color: #2563eb;
+}
+.activeIcon {
+    fill: #2563eb;
+}
